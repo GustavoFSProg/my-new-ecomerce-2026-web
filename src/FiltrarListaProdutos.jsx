@@ -158,12 +158,18 @@ function ListaDeProdutos() {
                     onClick={() => goToProfile(items.id)}
                   >
                     <Card>
-                      <h2 style={{ fontSize: "27px", color: "#c3c6c7" }}>
+                      <h2
+                        style={{
+                          fontSize: "32px",
+                          color: "#c3c6c7",
+                          marginTop: "-70px",
+                        }}
+                      >
                         {produto.name}
                       </h2>
                       <img
                         src={produto.image}
-                        style={{ borderRadius: "15px" }}
+                        style={{ borderRadius: "15px", marginTop: "25px" }}
                         width="250"
                         height="200"
                       />
