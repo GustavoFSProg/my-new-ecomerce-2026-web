@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
 import api from "./api";
 import ListaDeProdutos from "./FiltrarListaProdutos";
+import Header from "./Components/Header";
+import styled from "styled-components";
 
 const Card = styled.div`
   display: flex;
@@ -79,6 +80,7 @@ const BodyContainer = styled.div`
 
 function App() {
   const [produtos, setProdutos] = useState([]);
+  const [busca, setBusca] = useState("");
 
   async function GetProducts() {
     try {
@@ -91,18 +93,23 @@ function App() {
     }
   }
 
+  const produtosFiltrados = produtos.filter((produto) =>
+    produto.name.toLowerCase().includes(busca.toLowerCase()),
+  );
+
   useEffect(() => {
     GetProducts();
   }, []);
 
   return (
     <>
-      <ListaDeProdutos />
+      {/* <Header /> */}
       <ContainerGeral>
         <h1 style={{ color: "lightgray" }}>PRODUTOS</h1>
         <BodyContainer>
           <ContainerCards>
-            {produtos.map((produto) => {
+            <ListaDeProdutos />
+            {/* {produtos.map((produto) => {
               return (
                 <div key={produto.id}>
                   <buttom
@@ -136,8 +143,8 @@ function App() {
                     </Card>
                   </buttom>
                 </div>
-              );
-            })}
+              ); */}
+            {/* })} */}
           </ContainerCards>
         </BodyContainer>
       </ContainerGeral>
