@@ -81,6 +81,12 @@ function ListaDeProdutos() {
   // 1. Lista inicial de produtos
   const [produtos, setProdutos] = useState([]);
 
+  function numberToReal(numero) {
+    var numero = numero.toFixed(2).split(".");
+    numero[0] = "R$ " + numero[0].split(/(?=(?:...)*$)/).join(".");
+    return numero.join(",");
+  }
+
   async function GetProducts() {
     try {
       const { data } = await api.get("/get-products");
@@ -173,7 +179,7 @@ function ListaDeProdutos() {
                       </p>
 
                       <span style={{ color: "white" }}>
-                        R$ {produto.price.toFixed(2)}
+                        {numberToReal(produto.price)}
                       </span>
                     </Card>
                   </buttom>
