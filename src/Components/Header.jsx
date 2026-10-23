@@ -42,8 +42,47 @@ function Header() {
   return (
     <>
       <ContainerAll>
-        <ListaDeProdutos />
         <ContainerLinks>
+          <p
+            style={{
+              textDecoration: "none",
+              color: "lightgray",
+
+              cursor: "pointer",
+            }}
+          >
+            HOME
+          </p>
+          <p
+            style={{
+              textDecoration: "none",
+              color: "lightgray",
+
+              cursor: "pointer",
+            }}
+          >
+            CADASTRO
+          </p>
+          <p
+            style={{
+              textDecoration: "none",
+              color: "lightgray",
+
+              cursor: "pointer",
+            }}
+          >
+            ADMIN
+          </p>
+          <p
+            style={{
+              textDecoration: "none",
+              color: "lightgray",
+
+              cursor: "pointer",
+            }}
+          >
+            LOGIN
+          </p>
           {/* <Link
             style={{
               textDecoration: "none",

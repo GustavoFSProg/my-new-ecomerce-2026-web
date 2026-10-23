@@ -103,7 +103,7 @@ function App() {
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <ContainerGeral>
         <h1 style={{ color: "lightgray" }}>PRODUTOS</h1>
         {/* <BodyContainer> */}
