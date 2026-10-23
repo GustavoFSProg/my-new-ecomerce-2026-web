@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import api from "./api";
+import ListaDeProdutos from "./FiltrarListaProdutos";
 
 const Card = styled.div`
   display: flex;
@@ -96,6 +97,7 @@ function App() {
 
   return (
     <>
+      <ListaDeProdutos />
       <ContainerGeral>
         <h1 style={{ color: "lightgray" }}>PRODUTOS</h1>
         <BodyContainer>
