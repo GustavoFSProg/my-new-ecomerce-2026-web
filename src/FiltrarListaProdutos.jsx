@@ -178,7 +178,7 @@ function ListaDeProdutos() {
                         {produto.description}
                       </p>
 
-                      <span style={{ color: "white" }}>
+                      <span style={{ color: "white", fontSize: "20px" }}>
                         {numberToReal(produto.price)}
                       </span>
                     </Card>
