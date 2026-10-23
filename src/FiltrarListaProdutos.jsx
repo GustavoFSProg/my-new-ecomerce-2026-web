@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import api from "./api";
 import styled from "styled-components";
+import SearchIcon from "@mui/icons-material/Search";
 
 const Card = styled.div`
   display: flex;
@@ -104,15 +105,41 @@ function ListaDeProdutos() {
   );
 
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-    >
-      <input
-        type="text"
-        placeholder="Pesquisar produto pelo nome..."
-        value={busca}
-        onChange={(e) => setBusca(e.target.value)}
-      />
+    <ContainerGeral>
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          marginBottom: "20px",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <input
+          type="text"
+          placeholder="Pesquisar produto pelo nome..."
+          value={busca}
+          onChange={(e) => setBusca(e.target.value)}
+          style={{
+            width: "450px",
+            height: "40px",
+            marginBottom: "20px",
+            borderRadius: "5px",
+            paddingLeft: "10px",
+            fontSize: "16px",
+          }}
+        />
+        {/* <SearchIcon
+          style={{
+            display: "flex",
+            color: "white",
+            fontSize: "43x",
+            marginTop: "-18px",
+            marginLeft: "2px",
+          }}
+        /> */}
+      </div>
+
       <BodyContainer>
         <ContainerCards>
           {produtosFiltrados.length > 0 ? (
@@ -161,7 +188,7 @@ function ListaDeProdutos() {
           )}
         </ContainerCards>
       </BodyContainer>
-    </div>
+    </ContainerGeral>
   );
 }
 

@@ -106,10 +106,10 @@ function App() {
       {/* <Header /> */}
       <ContainerGeral>
         <h1 style={{ color: "lightgray" }}>PRODUTOS</h1>
-        <BodyContainer>
-          <ContainerCards>
-            <ListaDeProdutos />
-            {/* {produtos.map((produto) => {
+        {/* <BodyContainer> */}
+        {/* <ContainerCards> */}
+        <ListaDeProdutos />
+        {/* {produtos.map((produto) => {
               return (
                 <div key={produto.id}>
                   <buttom
@@ -144,9 +144,9 @@ function App() {
                   </buttom>
                 </div>
               ); */}
-            {/* })} */}
-          </ContainerCards>
-        </BodyContainer>
+        {/* })} */}
+        {/* </ContainerCards> */}
+        {/* </BodyContainer> */}
       </ContainerGeral>
     </>
   );
