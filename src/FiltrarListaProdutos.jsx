@@ -195,7 +195,7 @@ function ListaDeProdutos() {
           ) : (
             // ))
             <>
-              <p>NULL</p>
+              <p style={{ color: "white", fontSize: "28px", fontWeight: "bold" }}>NENHUM PRODUTO ENCONTRADO!</p>
             </>
           )}
         </ContainerCards>
