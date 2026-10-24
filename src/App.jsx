@@ -105,48 +105,8 @@ function App() {
     <>
       <Header />
       <ContainerGeral>
-        <h1 style={{ color: "lightgray" }}>PRODUTOS</h1>
-        {/* <BodyContainer> */}
-        {/* <ContainerCards> */}
+        <h1 style={{ color: "lightgray" }}>ELETRONICS, LOJA VIRTUAL</h1>
         <ListaDeProdutos />
-        {/* {produtos.map((produto) => {
-              return (
-                <div key={produto.id}>
-                  <buttom
-                    style={{ cursor: "pointer" }}
-                    onClick={() => goToProfile(items.id)}
-                  >
-                    <Card>
-                      <h2 style={{ fontSize: "27px", color: "#c3c6c7" }}>
-                        {produto.name}
-                      </h2>
-                      <img
-                        src={produto.image}
-                        style={{ borderRadius: "15px" }}
-                        width="250"
-                        height="200"
-                      />
-                      <p
-                        style={{
-                          width: "80%",
-                          color: "#e1e4e6",
-                          textIndent: "18px",
-                          textAlign: "justify",
-                        }}
-                      >
-                        {produto.description}
-                      </p>
-
-                      <span style={{ color: "white" }}>
-                        R$ {produto.price.toFixed(2)}
-                      </span>
-                    </Card>
-                  </buttom>
-                </div>
-              ); */}
-        {/* })} */}
-        {/* </ContainerCards> */}
-        {/* </BodyContainer> */}
       </ContainerGeral>
     </>
   );
