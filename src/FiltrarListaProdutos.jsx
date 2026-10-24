@@ -213,13 +213,19 @@ function ListaDeProdutos() {
             })
           ) : (
             // ))
-            <>
+            <div
+              style={{
+                display: "flex",
+                width: "82vw",
+                justifyContent: "center",
+              }}
+            >
               <p
                 style={{ color: "white", fontSize: "28px", fontWeight: "bold" }}
               >
                 NENHUM PRODUTO ENCONTRADO!
               </p>
-            </>
+            </div>
           )}
         </ContainerCards>
       </BodyContainer>
