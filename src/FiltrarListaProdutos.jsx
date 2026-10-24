@@ -77,6 +77,24 @@ const BodyContainer = styled.div`
   }
 `;
 
+const AddButton = styled.button`
+  width: 380px;
+  height: auto;
+  padding: 20px;
+  background: #0d3d53;
+  color: white;
+  border-radius: 10px;
+  margin-top: 80px;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  font-size: 17px;
+
+  &:hover {
+    background: #84adc0;
+    color: black;
+  }
+`;
+
 function ListaDeProdutos() {
   // 1. Lista inicial de produtos
   const [produtos, setProdutos] = useState([]);
@@ -153,16 +171,16 @@ function ListaDeProdutos() {
               // {produtos.map((produto) => {
               return (
                 <div key={produto.id}>
-                  <buttom
-                    style={{ cursor: "pointer" }}
-                    onClick={() => goToProfile(items.id)}
-                  >
-                    <Card>
+                  <Card>
+                    <buttom
+                      style={{ cursor: "pointer" }}
+                      onClick={() => goToProfile(items.id)}
+                    >
                       <h2
                         style={{
                           fontSize: "32px",
                           color: "#c3c6c7",
-                          marginTop: "-70px",
+                          marginTop: "20px",
                         }}
                       >
                         {produto.name}
@@ -187,15 +205,20 @@ function ListaDeProdutos() {
                       <span style={{ color: "white", fontSize: "20px" }}>
                         {numberToReal(produto.price)}
                       </span>
-                    </Card>
-                  </buttom>
+                    </buttom>
+                    <AddButton>Adicionar ao Carrrinho</AddButton>
+                  </Card>
                 </div>
               );
             })
           ) : (
             // ))
             <>
-              <p style={{ color: "white", fontSize: "28px", fontWeight: "bold" }}>NENHUM PRODUTO ENCONTRADO!</p>
+              <p
+                style={{ color: "white", fontSize: "28px", fontWeight: "bold" }}
+              >
+                NENHUM PRODUTO ENCONTRADO!
+              </p>
             </>
           )}
         </ContainerCards>
