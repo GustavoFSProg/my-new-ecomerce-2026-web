@@ -146,7 +146,7 @@ function Header() {
               justifyContent: "center",
             }}
           >
-            <Link to="/cart">
+            <Link style={{ textDecoration: "none", color: "white" }} to="/cart">
               <ShoppingCartIcon
                 onClick={CartFunction}
                 style={{ fontSize: "39px", cursor: "pointer" }}
