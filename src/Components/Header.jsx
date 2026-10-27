@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ListaDeProdutos from "../FiltrarListaProdutos";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ShoppingCart from "./Carrinho";
+import { useState } from "react";
 
 const ContainerAll = styled.div`
   display: flex;
@@ -41,9 +42,8 @@ const ContainerLinks = styled.div`
 `;
 
 function Header() {
-  function CartFunction() {
-    return <ShoppingCart />;
-  }
+  const [openCart, setOpenCart] = useState(false);
+
   return (
     <>
       <ContainerAll>
@@ -146,15 +146,27 @@ function Header() {
               justifyContent: "center",
             }}
           >
-            <Link style={{ textDecoration: "none", color: "white" }} to="/cart">
-              <ShoppingCartIcon
-                onClick={CartFunction}
-                style={{ fontSize: "39px", cursor: "pointer" }}
-              />
-            </Link>
+            {/* <Link style={{ textDecoration: "none", color: "white" }} to="/cart"> */}
+            <ShoppingCartIcon
+              onClick={() => setOpenCart(!openCart)}
+              style={{ fontSize: "39px", cursor: "pointer" }}
+            />
+
+            {/* </Link> */}
           </div>
         </ContainerLinks>
       </ContainerAll>
+      <div
+        style={{
+          display: "flex",
+          marginLeft: "1140px",
+          marginTop: "20px",
+          width: "30%",
+          position: "absolute",
+        }}
+      >
+        {openCart === true ? <ShoppingCart /> : null}
+      </div>
     </>
   );
 }

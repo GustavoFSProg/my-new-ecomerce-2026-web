@@ -42,15 +42,30 @@ export default function ShoppingCart() {
   );
 
   return (
-    <div style={{ padding: "20px", width: "50%", fontFamily: "sans-serif" }}>
-      <h1>Loja React + Vite</h1>
+    <div
+      style={{
+        display: "flex",
+        padding: "20px",
+        width: "100%",
+        height: "600px",
+        fontFamily: "sans-serif",
+        flexDirection: "column",
+        background: "#79c272",
+        // position: "absolute",
+        borderRadius: "20px",
+      }}
+    >
+      <h1>Carrinho de compras</h1>
 
       <h2>Produtos</h2>
       <div style={{ display: "flex", gap: "15px" }}>
         {produtosIniciais.map((prod) => (
           <div
             key={prod.id}
-            style={{ border: "1px solid #ccc", padding: "10px" }}
+            style={{
+              border: "1px solid #ccc",
+              padding: "10px",
+            }}
           >
             <h3>{prod.nome}</h3>
             <p>R$ {prod.preco.toFixed(2)}</p>
