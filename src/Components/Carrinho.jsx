@@ -6,7 +6,7 @@ const produtosIniciais = [
   { id: 3, nome: "Boné", preco: 29.9 },
 ];
 
-export default function App() {
+export default function ShoppingCart() {
   const [carrinho, setCarrinho] = useState([]);
 
   // Adicionar produto ao carrinho
@@ -42,7 +42,7 @@ export default function App() {
   );
 
   return (
-    <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
+    <div style={{ padding: "20px", width: "50%", fontFamily: "sans-serif" }}>
       <h1>Loja React + Vite</h1>
 
       <h2>Produtos</h2>

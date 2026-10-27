@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ListaDeProdutos from "../FiltrarListaProdutos";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import ShoppingCart from "./Carrinho";
 
 const ContainerAll = styled.div`
   display: flex;
@@ -20,7 +22,7 @@ const ContainerAll = styled.div`
 
 const ContainerLinks = styled.div`
   display: flex;
-  width: 40%;
+  width: 91%;
   height: 59px;
   /* background: darkblue; */
   /* background: #000099; */
@@ -39,6 +41,9 @@ const ContainerLinks = styled.div`
 `;
 
 function Header() {
+  function CartFunction() {
+    return <ShoppingCart />;
+  }
   return (
     <>
       <ContainerAll>
@@ -134,6 +139,20 @@ function Header() {
           >
             CADASTRO
           </Link> */}
+          <div
+            style={{
+              display: "flex",
+              width: "5%",
+              justifyContent: "center",
+            }}
+          >
+            <Link to="/cart">
+              <ShoppingCartIcon
+                onClick={CartFunction}
+                style={{ fontSize: "39px", cursor: "pointer" }}
+              />
+            </Link>
+          </div>
         </ContainerLinks>
       </ContainerAll>
     </>
